@@ -15,9 +15,10 @@ class _productBarState extends State<productBar> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
+          elevation: 1,
           title: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              SizedBox(width: 0),
               IconButton(
                 onPressed: () {},
                 icon: Icon(
@@ -25,45 +26,41 @@ class _productBarState extends State<productBar> {
                   color: Colors.black54,
                 ),
               ),
+              SizedBox(width: 0),
               InkWell(
                 onTap: () {},
                 child: Image.asset(
                   "assets/images/myntra2.png",
-                  height: 32,
+                  height: 33,
+                  fit: BoxFit.contain,
                 ),
               ),
             ],
           ),
           actions: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.add_box_outlined,
-                color: Colors.black54,
-              ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.search,
-                color: Colors.black54,
-              ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.favorite_border,
-                color: Colors.black54,
-              ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.shopping_bag_outlined,
-                color: Colors.black54,
-              ),
-            ),
+            SizedBox(width: 0),
+            customIcon(Icons.add_box_outlined, Colors.black54),
+            SizedBox(width: 0),
+            customIcon(Icons.search, Colors.black54),
+            SizedBox(width: 0),
+            customIcon(Icons.favorite_border_outlined, Colors.black54),
+            SizedBox(width: 0),
+            customIcon(Icons.shopping_bag_outlined, Colors.black54),
+            SizedBox(width: 0),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget customIcon(IconData icon, Color color) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 0),
+      child: IconButton(
+        onPressed: () {},
+        icon: Icon(
+          icon,
+          color: color,
         ),
       ),
     );
