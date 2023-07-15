@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class productBar extends StatefulWidget {
-  const productBar({super.key});
+class LeadingBar extends StatefulWidget {
+  const LeadingBar({super.key});
 
   @override
-  State<productBar> createState() => _productBarState();
+  State<LeadingBar> createState() => _LeadingBarState();
 }
 
-class _productBarState extends State<productBar> {
+class _LeadingBarState extends State<LeadingBar> {
   @override
   Widget build(BuildContext context) {
     return IconButton(

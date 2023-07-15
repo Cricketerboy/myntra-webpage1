@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myntrawebpage1/webpage2/utils/myntrainsider.dart';
 
 class DrawerScreen extends StatefulWidget {
   const DrawerScreen({super.key});
@@ -41,7 +42,12 @@ class _DrawerScreenState extends State<DrawerScreen> {
                         style: TextStyle(color: Colors.pink),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MyntraInsider()));
+                        },
                         child: Text(
                           'LOGIN',
                           style: TextStyle(
@@ -155,7 +161,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
               color: Colors.black26,
               thickness: 0.5,
             ),
-            SizedBox(height: 4),
+            SizedBox(height: 8),
             Row(
               children: [
                 InkWell(
@@ -176,6 +182,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: Colors.pink,
+                        width: 1.3,
                       ),
                       borderRadius: BorderRadius.circular(5),
                     ),
@@ -183,7 +190,10 @@ class _DrawerScreenState extends State<DrawerScreen> {
                       padding: const EdgeInsets.only(top: 1),
                       child: Text(
                         'NEW',
-                        style: TextStyle(color: Colors.pink, fontSize: 8),
+                        style: TextStyle(
+                            color: Colors.pink,
+                            fontSize: 8,
+                            fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -212,6 +222,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: Colors.pink,
+                        width: 1.3,
                       ),
                       borderRadius: BorderRadius.circular(5),
                     ),
@@ -219,7 +230,10 @@ class _DrawerScreenState extends State<DrawerScreen> {
                       padding: const EdgeInsets.only(top: 1),
                       child: Text(
                         'NEW',
-                        style: TextStyle(color: Colors.pink, fontSize: 8),
+                        style: TextStyle(
+                            color: Colors.pink,
+                            fontSize: 8,
+                            fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -229,18 +243,10 @@ class _DrawerScreenState extends State<DrawerScreen> {
             ),
             SizedBox(height: 26),
             InkWell(
-              onTap: () {},
-              child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 12),
-                child: Text(
-                  'Myntra Insider',
-                  style: TextStyle(color: Colors.black54),
-                ),
-              ),
-            ),
-            SizedBox(height: 26),
-            InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MyntraInsider()));
+              },
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 12),
                 child: Text(

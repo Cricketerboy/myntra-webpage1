@@ -30,11 +30,15 @@ class _HomeState extends State<Home> {
           elevation: 1.0,
           leading: productBar(),
           titleSpacing: -20,
-          title: Container(
-            height: 34,
-            child: Image.asset(
-              "assets/images/myntra2.png",
-              fit: BoxFit.cover,
+          title: InkWell(
+            onTap: () {},
+            child: Container(
+              padding: const EdgeInsets.only(top: 4),
+              height: 34,
+              child: Image.asset(
+                "assets/images/myntra2.png",
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           centerTitle: false,
