@@ -20,8 +20,7 @@ class _BigScreenState extends State<BigScreen> {
           bottomRight: Radius.circular(10),
         ),
         image: DecorationImage(
-          image: NetworkImage(
-              "https://cdn.flipshope.com/blog/wp-content/uploads/2022/09/Myntra-Big-Fashion-Festival-2nd-Oct.jpg"),
+          image: AssetImage("assets/images/myntra3.webp"),
           fit: BoxFit.fill,
         ),
       ),
